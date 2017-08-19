@@ -67,7 +67,7 @@ var articals={
 
 function createTemplate(data){
 
-var title=data.title;
+var title=data.titles;
 var heading=data.heading;
 var date=data.date;
 var content=data.content;
