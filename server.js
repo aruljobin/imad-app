@@ -5,24 +5,65 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-
-var articalOne={
-    title:"Artical One Arul jobin",
-    heading:"Artical One",
-    date:"Aug 19 2017",
-    content:` 
-        <p>
-            This is a the first artical
-        </p>
+var articals={
+    
+    'artical-One':{
         
-        <p>
-            This is a the first artical
-        </p>
+        title:"Artical One Arul jobin",
+        heading:"Artical One",
+        date:"Aug 19 2017",
+        content:` 
+            <p>
+                This is a the first artical
+            </p>
+            
+            <p>
+                This is a the first artical
+            </p>
+            
+            <p>
+                This is a the first artical
+            </p>`
+    },
+    'artical-Two':{ 
         
-        <p>
-            This is a the first artical
-        </p>`
-}
+        title:"Artical Two Arul jobin",
+        heading:"Artical Two",
+        date:"Aug 19 2017",
+        content:` 
+            <p>
+                This is a the 2nd artical
+            </p>
+            
+            <p>
+                This is a the 2nd artical
+            </p>
+            
+            <p>
+                This is a the 2nd artical
+            </p>`
+        
+    },
+    'artical-Three':{
+        
+        title:"Artical Three Arul jobin",
+        heading:"Artical Three",
+        date:"Aug 19 2017",
+        content:` 
+            <p>
+                This is a the 3rd artical
+            </p>
+            
+            <p>
+                This is a the 3rd artical
+            </p>
+            
+            <p>
+                This is a the 3rd artical
+            </p>`
+        
+    }
+};
 
 function createTemplate(data){
 
@@ -80,8 +121,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/artical-one',function(req,res){
-    res.send(createTemplate(articalOne));
+app.get('/:articalName',function(req,res){
+    var articalName=req.parmas.articalName;
+    res.send(createTemplate(articals[articalName]));
 });
 
 app.get('/artical-two',function(req,res){
