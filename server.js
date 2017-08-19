@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 var articals={
     
-    'artical-One':{
+    'artical-one':{
         
         title:"Artical One Arul jobin",
         heading:"Artical One",
@@ -25,7 +25,7 @@ var articals={
                 This is a the first artical
             </p>`
     },
-    'artical-Two':{ 
+    'artical-two':{ 
         
         title:"Artical Two Arul jobin",
         heading:"Artical Two",
@@ -44,7 +44,7 @@ var articals={
             </p>`
         
     },
-    'artical-Three':{
+    'artical-three':{
         
         title:"Artical Three Arul jobin",
         heading:"Artical Three",
@@ -78,7 +78,7 @@ var htmlTemp=`
     
     <head>
         <title>
-            ${titles}
+            ${title}
         </title>
         
         <link href="/ui/style.css" rel="stylesheet" />
