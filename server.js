@@ -121,9 +121,10 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:articalName',function(req,res){
-    var articalName=req.parmas.articalName;
-    res.send(createTemplate(articals[articalName]));
+app.get('/:articleName',function(req,res){
+    
+    var articleName=req.parmas.articleName;
+    res.send(createTemplate(articals[articleName]));
 });
 
 app.get('/artical-two',function(req,res){
