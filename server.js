@@ -67,7 +67,7 @@ var articals={
 
 function createTemplate(data){
 
-var title=data.titles;
+var title=data.title;
 var heading=data.heading;
 var date=data.date;
 var content=data.content;
@@ -78,7 +78,7 @@ var htmlTemp=`
     
     <head>
         <title>
-            ${title}
+            ${titles}
         </title>
         
         <link href="/ui/style.css" rel="stylesheet" />
